@@ -18,15 +18,19 @@ public class Member {
     private String username;
     @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
+    private String email;
 
-    public Member(String username, String password){
+    public Member(String username, String password, String email){
         this.username = username;
         this.password = password;
+        this.email = email;
     }
 
     public Member(MemberRequestDto requestDto){
         this.username = requestDto.getUsername();
         this.password = requestDto.getPassword();
+        this.email = requestDto.getEmail();
     }
 
 }
