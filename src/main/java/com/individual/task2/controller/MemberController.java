@@ -28,17 +28,13 @@ public class MemberController {
     @PostMapping("/login")
     public String loginProcess(@RequestParam String username, @RequestParam String password, Model model){
         Member member = memberRepository.findByUsername(username);
-        String encodePassword = passwordEncoder.encode(password);
         if(member == null){
-            return "error";
+            return "error"; // 잘못된 정보라는 메시지 띄우고 로그인창으로 이동
         }
-        System.out.println("password = " + password);
-        System.out.println("encodePassword = " + encodePassword);
-        System.out.println("member.password = " + member.getPassword());
         boolean check = passwordEncoder.matches(password, member.getPassword());
         if(!check){
             System.out.println("비밀번호 다름!");
-            return "error";
+            return "error"; // 잘못된 정보라는 메시지 띄우고 로그인창으로 이동
         }
         System.out.println("로그인 성공!");
         model.addAttribute("username", username);
