@@ -37,18 +37,14 @@ public class MemberController {
     }
 
     @PostMapping("/signup")
-    @ResponseBody
     public String signInPage(@ModelAttribute MemberRequestDto requestDto){
         if(memberService.isValidUsername(requestDto)){
             System.out.println("이미존재해");
-            return "<script>" +
-                    "alert('중복된 아이디입니다');" +
-                    "window.location('/user/signup');"+
-                    "</script>";
+            return "/user/signup";
         }
         System.out.println("등록가능");
         Member member= new Member(requestDto);
         memberRepository.save(member);
-        return "index";
+        return "/user/login";
     }
 }
