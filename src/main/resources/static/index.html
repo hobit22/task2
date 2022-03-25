@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <title>바다 위 대나무 숲</title>
+    <!--    font-family: 'Jua', sans-serif;-->
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<div class="background-header">
+</div>
+<div class="background-body">
+
+</div>
+<div class="wrap">
+    <div class="header">
+        <a id="logout-text" href="/user/logout">
+            로그아웃
+        </a>
+        <a id="login-text" href="/user/login">
+            로그인
+        </a>
+        <a id="signup-text" href="/user/signup">
+            회원가입
+        </a>
+
+
+        <h2>항해99 바다 위 대나무숲<br><br>
+            <li><span>spring</span> 님,<br><br></li>
+
+            (방문자 수: <span th:text="${username}"></span>)
+            맘껏 외치세요 무야호!
+        </h2>
+    </div>
+    <div class="to-write">
+        <li>
+            <button type="button" class="btn btn-primary" onclick="location.href='write.html'"><b>글 쓰 기</b></button>
+        </li>
+    </div>
+    <div id="cards-box" class="area-read">
+        <div class="card">
+            <div class="metadata">
+                <div class="date">
+                    October 10, 2020
+                </div>
+                <div class="name">
+                    anonymous
+                </div>
+            </div>
+            <h2>asd</h2>
+            <div class="contents">
+                <div id="1-contents" class="text">
+                    dsafnkalfklewakflekelafkleajfkleafkldsankflenwaklfnekwlafneklwanfkelawnfkelanfkleanfklew
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
